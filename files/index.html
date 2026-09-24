@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toumany Dev Campus</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div id="setup" class="wrap hide"><div class="card"><h1>Configuration requise</h1><p class="sub">Ouvrez <b>app.js</b> dans un éditeur et collez votre clé <b>sb_publishable_…</b> dans la ligne SUPABASE_KEY (Supabase, Project Settings, API Keys). N'utilisez jamais une clé <b>sb_secret_…</b>.</p></div></div>
+
+<div id="auth" class="wrap hide"><form class="card" id="af">
+  <div class="logo" style="margin-bottom:14px"><i></i>Toumany Dev Campus</div>
+  <h1 id="at">Connexion</h1><p class="sub">Vos notes, matières et projets sont privés : vous seul y avez accès.</p>
+  <label class="up hide">Nom complet<input class="fld" id="an" autocomplete="name"></label>
+  <label class="up hide">Téléphone<input class="fld" id="aph" type="tel" autocomplete="tel"></label>
+  <label>E-mail<input class="fld" id="ae" type="email" required autocomplete="email"></label>
+  <label>Mot de passe<input class="fld" id="ap" type="password" minlength="6" required autocomplete="current-password"></label>
+  <label class="up hide">Confirmer le mot de passe<input class="fld" id="ap2" type="password" minlength="6" autocomplete="new-password"></label>
+  <p class="msg" id="am" role="alert"></p>
+  <button class="btn" id="ab" style="width:100%">Se connecter</button>
+  <button class="link" id="sw" type="button">Pas de compte ? Créer un compte</button>
+</form></div>
+
+<div id="app" class="hide">
+  <header class="top"><div class="logo"><i></i>Toumany Dev Campus</div><nav class="tabs" id="tabs"></nav>
+    <div class="seg" id="lvs" role="group" aria-label="Niveau"></div>
+    <button class="ctl" id="th" aria-label="Changer le thème">☾</button>
+    <span id="who" style="font-weight:600"></span><button class="ctl" id="out">Déconnexion</button></header>
+  <main id="main"></main>
+</div>
+<div id="toast" class="hide" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
